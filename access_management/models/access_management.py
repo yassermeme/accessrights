@@ -3,6 +3,7 @@
 Profiles are *restrictive overlays*: native Odoo ACLs and record rules are
 always evaluated first; this module can only deny further access.
 """
+
 from ast import literal_eval
 
 from odoo import api, fields, models, _
@@ -145,13 +146,13 @@ class AccessManagement(models.Model):
 
         for record in self:
             if (
-                    record.user_ids & recovery.user_ids
-                    and (
+                record.user_ids & recovery.user_ids
+                and (
                     record.read_only
                     or record.global_disable_create
                     or record.global_disable_write
                     or record.global_disable_delete
-            )
+                )
             ):
                 raise ValidationError(_(
                     'Recovery administrators cannot be assigned an active '
@@ -347,6 +348,10 @@ class ButtonRule(models.Model):
     hide_button = fields.Boolean(default=True)
     disable_button = fields.Boolean()
     page_name = fields.Char()
+    hide_kanban_link = fields.Boolean(
+        string='Hide Kanban Link',
+        default=False,
+    )
 
 
 class SearchPanelRule(models.Model):
@@ -375,7 +380,7 @@ class SearchPanelRule(models.Model):
 class ChatterRule(models.Model):
     _name = 'access.management.chatter.rule'
     _inherit = 'access.management.rule'
-    _description = 'Chatter Access Rule'
+    _description = 'Chatter Rule'
 
     model_id = fields.Many2one(
         'ir.model',
