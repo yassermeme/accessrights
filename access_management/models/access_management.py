@@ -325,10 +325,14 @@ class ButtonRule(models.Model):
         required=True,
         ondelete='cascade',
     )
+    model_name = fields.Char(
+        related='model_id.model',
+        readonly=True,
+    )
     view_id = fields.Many2one(
         'ir.ui.view',
         ondelete='cascade',
-        domain="[('model', '=', model_id.model)]",
+        domain="[('model', '=', model_name)]",
     )
     button_name = fields.Char()
     button_label = fields.Char()
