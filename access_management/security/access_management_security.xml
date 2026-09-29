@@ -1,0 +1,5 @@
+<odoo>
+  <record id="access_management_module_category" model="ir.module.category"><field name="name">Access Management</field><field name="sequence">90</field></record>
+  <record id="access_management_group_manager" model="res.groups"><field name="name">Access Management Manager</field><field name="category_id" ref="access_management_module_category"/></record>
+  <record id="access_management_group_recovery" model="res.groups"><field name="name">Access Management Recovery Administrator</field><field name="category_id" ref="access_management_module_category"/><field name="implied_ids" eval="[(4, ref('access_management_group_manager'))]"/></record>
+</odoo>
