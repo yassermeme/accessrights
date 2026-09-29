@@ -156,15 +156,20 @@
                         <page string="Button/Tab Access">
                             <field name="button_rule_ids">
                                 <list editable="bottom">
-                                    <field name="model_id" options="{'no_create': True, 'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
-                                    <field name="view_id" options="{'no_create': True, 'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
-                                    <field name="restriction_type"/>
-                                    <field name="button_name"/>
-                                    <field name="button_label"/>
-                                    <field name="page_name"/>
-                                    <field name="hide_button"/>
-                                    <field name="disable_button"/>
-                                    <field name="note"/>
+                                    <field name="model_id" options="{'no_create': True, 'no_quick_create': True,'no_create_edit': True,'no_open': True}"/>
+                                    <field name="button_name" string="Hide Button"/>
+                                    <field name="page_name" string="Hide Tab/Page"/>
+                                    <field name="hide_kanban_link" string="Hide Kanban Link"/>
+
+                                    <!-- نخفي الحقول الفنية المستخدمة في منطق القاعدة -->
+                                    <field name="restriction_type" invisible="1"/>
+                                    <field name="view_id" optional="hide"
+                                           options="{'no_create': True, 'no_quick_create': True,
+                                                     'no_create_edit': True, 'no_open': True}"/>
+                                    <field name="button_label" optional="hide"/>
+                                    <field name="hide_button" optional="hide"/>
+                                    <field name="disable_button" optional="hide"/>
+                                    <field name="note" optional="hide"/>
                                 </list>
                             </field>
                         </page>
