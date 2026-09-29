@@ -157,7 +157,7 @@
                             <field name="button_rule_ids">
                                 <list editable="bottom">
                                     <field name="model_id" options="{'no_create': True, 'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
-                                    <field name="view_id"/>
+                                    <field name="view_id" options="{'no_create': True, 'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
                                     <field name="restriction_type"/>
                                     <field name="button_name"/>
                                     <field name="button_label"/>
@@ -173,7 +173,7 @@
                             <field name="search_panel_rule_ids">
                                 <list editable="bottom">
                                     <field name="model_id" options="{'no_create': True, 'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
-                                    <field name="view_id"/>
+                                    <field name="view_id" string="Specific View (optional)" optional="hide" options="{'no_create': True,'no_quick_create': True,'no_create_edit': True,'no_open': True}"/>
                                     <field name="field_id" options="{'no_create': True, 'no_quick_create': True, 'no_create_edit': True, 'no_open': True}" />
                                     <field name="invisible"/>
                                     <field name="note"/>
