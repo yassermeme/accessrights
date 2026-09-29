@@ -10,7 +10,8 @@
     <menuitem id="access_management_menu_root"
               name="Access Management"
               sequence="90"
-              groups="access_management.access_management_group_manager"/>
+              groups="access_management.access_management_group_manager"
+              web_icon="access_management,static/description/icon.png"/>
 
     <menuitem id="access_management_menu_profiles"
               name="Profiles"
