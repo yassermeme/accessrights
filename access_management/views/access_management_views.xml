@@ -160,16 +160,13 @@
                                     <field name="button_name" string="Hide Button"/>
                                     <field name="page_name" string="Hide Tab/Page"/>
                                     <field name="hide_kanban_link" string="Hide Kanban Link"/>
-
                                     <!-- نخفي الحقول الفنية المستخدمة في منطق القاعدة -->
-                                    <field name="restriction_type" invisible="1"/>
-                                    <field name="view_id" optional="hide"
-                                           options="{'no_create': True, 'no_quick_create': True,
-                                                     'no_create_edit': True, 'no_open': True}"/>
-                                    <field name="button_label" optional="hide"/>
-                                    <field name="hide_button" optional="hide"/>
-                                    <field name="disable_button" optional="hide"/>
-                                    <field name="note" optional="hide"/>
+<!--                                    <field name="restriction_type" invisible="1"/>-->
+<!--                                    <field name="view_id" optional="hide" options="{'no_create': True, 'no_quick_create': True,'no_create_edit': True, 'no_open': True}"/>-->
+<!--                                    <field name="button_label" optional="hide"/>-->
+<!--                                    <field name="hide_button" optional="hide"/>-->
+<!--                                    <field name="disable_button" optional="hide"/>-->
+<!--                                    <field name="note" optional="hide"/>-->
                                 </list>
                             </field>
                         </page>
